@@ -1,0 +1,26 @@
+Instructions to Install Nodejs latest Version for Ubuntu via NVM:
+
+P.s - In order to Unistall Nodejs:
+
+rm -rf $NVM_DIR ~/.npm ~/.bower
+
+Start With This:
+1. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+Exit the Terminal and Start Again
+
+2. nvm install 14.4.0 (or your preferable version)
+
+3....
+sudo rm -rf /var/lib/apt/lists/*
+sudo rm -rf /etc/apt/sources.list.d/*
+sudo apt-get update
+
+4... 
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
+5...
+sudo apt-get install -y nodejs
+
+6..
+sudo apt install build-essential
