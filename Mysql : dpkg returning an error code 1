@@ -1,0 +1,11 @@
+dpkg returning an error code 1 doesn't mean anything specific but it usually has to do with dependency issues.
+In your case, you tried to install two versions/instances of the same package i.e. mysql-server and mysql-server-5.7.
+So do the following to remove any redundant dependency issues and install a functioning mysql package
+
+sudo apt-get clean
+sudo apt-get purge mysql*
+sudo apt-get update
+sudo apt-get install -f
+sudo apt-get install mysql-server-5.7
+sudo apt-get dist-upgrade
+
